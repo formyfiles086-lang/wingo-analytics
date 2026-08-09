@@ -159,7 +159,7 @@ export async function generatePrediction(
     violetProbability: parseFloat(colorNorm.violet.toFixed(4)),
     numberProbabilities: Object.fromEntries(
       Object.entries(normNumProbs).map(([k, v]) => [k, parseFloat(v.toFixed(4))])
-    ) as NumberProbabilities,
+    ) as unknown as NumberProbabilities,
     topNumber: topNum,
     topColor,
     modelAgreement: parseFloat(modelAgreement.toFixed(4)),

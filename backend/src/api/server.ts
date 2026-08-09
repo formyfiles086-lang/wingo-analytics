@@ -90,7 +90,7 @@ app.get('/api/status', async (_, res) => {
 app.get('/api/results/latest', async (req, res) => {
   try {
     const limit = Math.min(500, parseInt(String(req.query.limit || '20')));
-    let results = [];
+    let results: WinGoResult[] = [];
     try {
       results = await getLatestResults(GAME, limit);
     } catch {}
@@ -109,7 +109,7 @@ app.get('/api/results/history', async (req, res) => {
   try {
     const page = Math.max(1, parseInt(String(req.query.page || '1')));
     const pageSize = Math.min(100, parseInt(String(req.query.pageSize || '50')));
-    let results = [], total = 0;
+    let results: WinGoResult[] = [], total = 0;
     try {
       const res = await getResultsPage(GAME, page, pageSize);
       results = res.results;
