@@ -1,6 +1,43 @@
 [
   {
     "game": "WinGo_30S",
+    "issueNumber": "20260809100051345",
+    "number": 9,
+    "size": "BIG",
+    "colors": [
+      "green"
+    ],
+    "premium": "9",
+    "sum": 0,
+    "receivedAt": "2026-08-09T11:12:30.922Z"
+  },
+  {
+    "game": "WinGo_30S",
+    "issueNumber": "20260809100051344",
+    "number": 5,
+    "size": "BIG",
+    "colors": [
+      "green",
+      "violet"
+    ],
+    "premium": "5",
+    "sum": 0,
+    "receivedAt": "2026-08-09T11:12:05.162Z"
+  },
+  {
+    "game": "WinGo_30S",
+    "issueNumber": "20260809100051343",
+    "number": 7,
+    "size": "BIG",
+    "colors": [
+      "green"
+    ],
+    "premium": "7",
+    "sum": 0,
+    "receivedAt": "2026-08-09T11:11:30.390Z"
+  },
+  {
+    "game": "WinGo_30S",
     "issueNumber": "20260809100051342",
     "number": 3,
     "size": "SMALL",

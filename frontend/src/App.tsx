@@ -5,7 +5,7 @@ import PatternsPage from './pages/Patterns';
 import AnalysisPage from './pages/Analysis';
 import AdminPage from './pages/Admin';
 
-const APP_PASSCODE = '7860'; // Default passcode (Changeable anytime)
+const APP_PASSCODE = '7271'; // App passcode
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
