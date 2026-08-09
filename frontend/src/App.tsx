@@ -8,16 +8,13 @@ import AdminPage from './pages/Admin';
 const APP_PASSCODE = '7271'; // App passcode
 
 export default function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
-    return localStorage.getItem('wingo_auth') === 'true';
-  });
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [pinInput, setPinInput] = useState('');
   const [pinError, setPinError] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (pinInput === APP_PASSCODE) {
-      localStorage.setItem('wingo_auth', 'true');
+    if (pinInput.trim() === APP_PASSCODE) {
       setIsAuthenticated(true);
       setPinError(false);
     } else {
@@ -27,7 +24,6 @@ export default function App() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('wingo_auth');
     setIsAuthenticated(false);
   };
 
