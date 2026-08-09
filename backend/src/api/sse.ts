@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { SSEEventType } from '../../../shared/types';
+import { SSEEventType } from '../shared/types';
 import logger from '../logging/logger';
 
 // Track all connected SSE clients

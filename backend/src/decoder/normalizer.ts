@@ -1,4 +1,4 @@
-import { RawWinGoResult, WinGoResult, GameType, ColorType, SizeType } from '../../shared/types';
+import { RawWinGoResult, WinGoResult, GameType, ColorType, SizeType } from '../shared/types';
 import logger from '../logging/logger';
 
 // ── Color mapping (verified from live data) ───────────────────

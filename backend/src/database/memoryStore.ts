@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { WinGoResult } from '../../shared/types';
+import { WinGoResult } from '../shared/types';
 import logger from '../logging/logger';
 
 const DATA_DIR = path.join(process.cwd(), 'data');

@@ -1,4 +1,4 @@
-import { WinGoResult, PredictionSnapshot, NumberProbabilities, GameType, ConfidenceLevel, ColorType } from '../../shared/types';
+import { WinGoResult, PredictionSnapshot, NumberProbabilities, GameType, ConfidenceLevel, ColorType } from '../shared/types';
 import {
   analyzeFrequency, analyzeRecency, buildTransitionMatrix,
   analyzeRuns, analyzeGaps, findSimilarSequences,

@@ -1,4 +1,4 @@
-import { WinGoResult, GameType, BacktestResult } from '../../shared/types';
+import { WinGoResult, GameType, BacktestResult } from '../shared/types';
 import { generatePrediction, setModelWeights } from '../prediction/engine';
 import { insertBacktestResult } from '../database/queries';
 import logger from '../logging/logger';

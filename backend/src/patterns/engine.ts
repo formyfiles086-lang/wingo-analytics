@@ -1,4 +1,4 @@
-import { WinGoResult, ColorType, SizeType } from '../../shared/types';
+import { WinGoResult, ColorType, SizeType } from '../shared/types';
 
 // ── Module A: Frequency Analysis ──────────────────────────────
 export function analyzeFrequency(results: WinGoResult[], window: number) {

@@ -4,7 +4,7 @@ import { normalizeResult, validateResult } from '../decoder/normalizer';
 import { insertResult, updateSourceStatus, getLatestIssueNumber, countResults } from '../database/queries';
 import { addInMemoryResult, bulkAddInMemoryResults, countInMemoryResults, getInMemoryResults } from '../database/memoryStore';
 import { generateAndStorePrediction } from '../prediction/engine';
-import { GameType, WinGoResult } from '../../shared/types';
+import { GameType, WinGoResult } from '../shared/types';
 import { emitSSE } from '../api/sse';
 import logger from '../logging/logger';
 

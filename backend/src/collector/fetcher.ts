@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { RawWinGoResponse, GameType } from '../../shared/types';
+import { RawWinGoResponse, GameType } from '../shared/types';
 import logger from '../logging/logger';
 import dotenv from 'dotenv';
 dotenv.config();
