@@ -1,4 +1,4 @@
-const BACKEND_URL = import.meta.env.VITE_API_URL || '';
+const BACKEND_URL = import.meta.env.VITE_API_URL || 'https://wingo-analytics-production.up.railway.app';
 
 async function apiFetch<T>(path: string): Promise<T> {
   const res = await fetch(`${BACKEND_URL}${path}`);
