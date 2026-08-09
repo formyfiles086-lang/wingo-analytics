@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import compression from 'compression';
 import helmet from 'helmet';
+import { WinGoResult } from '../shared/types';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -137,7 +138,7 @@ app.get('/api/prediction/latest', async (_, res) => {
     } catch {}
     if (!prediction) {
       const { getInMemoryResults } = await import('../database/memoryStore');
-      const results = getInMemoryResults(500);
+      const results: WinGoResult[] = getInMemoryResults(500);
       if (results.length < 5) {
         return res.status(200).json({
           success: false,
@@ -158,7 +159,7 @@ app.get('/api/prediction/latest', async (_, res) => {
 app.get('/api/patterns', async (req, res) => {
   try {
     const window = parseInt(String(req.query.window || '100'));
-    let results = [];
+    let results: WinGoResult[] = [];
     try {
       results = await getLatestResults(GAME, 500);
     } catch {}
@@ -193,7 +194,7 @@ app.get('/api/patterns', async (req, res) => {
 // GET /api/statistics?window=100
 app.get('/api/statistics', async (req, res) => {
   try {
-    let results = [];
+    let results: WinGoResult[] = [];
     try {
       results = await getLatestResults(GAME, 500);
     } catch {}

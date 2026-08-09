@@ -304,26 +304,3 @@ function dbToPrediction(row: Record<string, unknown>): PredictionSnapshot {
     numberCorrect: row.number_correct as boolean | undefined,
   };
 }
-
-// ── Backtest ──────────────────────────────────────────────────
-export async function insertBacktestResult(result: BacktestResult): Promise<boolean> {
-  try {
-    const { error } = await supabase
-      .from('backtest_results')
-      .insert({
-        game: result.game,
-        run_at: result.runAt,
-        sample_size: result.sampleSize,
-        big_small_accuracy: result.bigSmallAccuracy,
-        color_accuracy: result.colorAccuracy,
-        number_top1_accuracy: result.numberTop1Accuracy,
-        avg_brier_score: result.avgBrierScore,
-        calibration_score: result.calibrationScore,
-        model_weights: result.modelWeights,
-      });
-    if (error) { logger.debug(`DB insertBacktestResult: ${error.message}`); return false; }
-    return true;
-  } catch {
-    return false;
-  }
-}

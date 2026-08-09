@@ -181,7 +181,7 @@ export async function generatePrediction(
 
 // ── Generate and store in DB ──────────────────────────────────
 export async function generateAndStorePrediction(game: GameType): Promise<PredictionSnapshot | null> {
-  let results = [];
+  let results: WinGoResult[] = [];
   try {
     results = await getLatestResults(game, 500);
   } catch {}
